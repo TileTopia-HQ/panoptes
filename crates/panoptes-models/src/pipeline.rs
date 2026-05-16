@@ -65,8 +65,7 @@ impl Pipeline {
         let mut all_features = Vec::new();
         for tr in &tile_results {
             if let InferenceResult::Segmentation { mask, .. } = &tr.inference
-                && let Ok(features) =
-                    polygonize_all(mask, self.config.classes.len(), self.min_area)
+                && let Ok(features) = polygonize_all(mask, self.config.classes.len(), self.min_area)
             {
                 // Offset features to global coordinates
                 all_features.extend(features.into_iter().map(|mut f| {

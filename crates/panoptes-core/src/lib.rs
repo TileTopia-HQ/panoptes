@@ -6,4 +6,6 @@
 pub mod confidence;
 pub mod inference;
 pub mod model;
+#[cfg(feature = "onnx")]
+pub mod onnx;
 pub mod tensor;

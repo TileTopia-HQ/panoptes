@@ -22,8 +22,8 @@ pub fn detect_change(before: &ImageTensor, after: &ImageTensor, threshold: f32) 
     let shape = before.shape();
     let (c, h, w) = (shape[0], shape[1], shape[2]);
 
-    let mut magnitude = Array2::zeros((h, w));
-    let mut change_mask = Array2::zeros((h, w));
+    let mut magnitude = Array2::<f32>::zeros((h, w));
+    let mut change_mask = Array2::<u8>::zeros((h, w));
     let mut changed_count = 0u64;
 
     for y in 0..h {

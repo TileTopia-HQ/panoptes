@@ -1100,6 +1100,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "384b8ab6d37215f3c5301a95a4accb5d64aa607f1fcb26a11b5303878451b4fe"
 
 [[package]]
+name = "ort"
+version = "2.0.0-rc.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d7de3af33d24a745ffb8fab904b13478438d1cd52868e6f17735ef6e1f8bf133"
+dependencies = [
+ "ort-sys",
+ "smallvec",
+]
+
+[[package]]
+name = "ort-sys"
+version = "2.0.0-rc.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d7b497d21a8b6fbb4b5a544f8fadb77e801a09ae0add9e411d31c6f89e3c1e90"
+
+[[package]]
 name = "panoptes-cli"
 version = "0.1.0"
 dependencies = [
@@ -1119,6 +1135,7 @@ version = "0.1.0"
 dependencies = [
  "approx",
  "ndarray",
+ "ort",
  "rayon",
  "serde",
  "serde_json",
