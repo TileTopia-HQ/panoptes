@@ -51,7 +51,7 @@ jobs:
           cd target/${{ matrix.target }}/release
           tar czf ../../../panoptes-${{ matrix.target }}.tar.gz panoptes
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: panoptes-${{ matrix.target }}
           path: panoptes-${{ matrix.target }}.tar.gz
